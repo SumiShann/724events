@@ -24,8 +24,6 @@ const EventList = () => {
     //   (currentPage - 1) * PER_PAGE <= index &&
     //   PER_PAGE * currentPage > index
     // ) {
-    //   console.log(type);
-    //   console.log(index);
     //   return true;
     // }
     // return false;
