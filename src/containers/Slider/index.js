@@ -22,7 +22,6 @@ const Slider = () => {
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => (
-        <>
           <div
             key={event.title}
             className={`SlideCard SlideCard--${
@@ -37,20 +36,20 @@ const Slider = () => {
                 <div>{getMonth(new Date(event.date))}</div>
               </div>
             </div>
-          </div>
-          <div className="SlideCard__paginationContainer">
-            <div className="SlideCard__pagination">
-              {byDateDesc.map((elt, radioIdx) => (
-                <input
-                  key={`${elt.id}`}
-                  type="radio"
-                  name="radio-button"
-                  checked={idx === radioIdx}
-                />
-              ))}
+            <div className="SlideCard__paginationContainer">
+              <div className="SlideCard__pagination">
+                {byDateDesc.map((elt, radioIdx) => (
+                  <input
+                    key={`${elt.id}`}
+                    type="radio"
+                    name="radio-button"
+                    checked={idx === radioIdx}
+                    readOnly
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </>
       ))}
     </div>
   );
