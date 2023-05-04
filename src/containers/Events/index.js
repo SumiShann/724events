@@ -30,7 +30,6 @@ const EventList = () => {
   
 
   const changeType = (evtType) => {
-    console.log(evtType);
     setCurrentPage(1);
     setType(evtType);
   };
@@ -50,7 +49,7 @@ const EventList = () => {
             onChange={(value) => (value ? changeType(value) : changeType(null))}
           />
           <div id="events" className="ListContainer">
-            {filteredEvents.map((event) => (
+            {filteredEvents?.map((event) => (
               <Modal key={event.id} Content={<ModalEvent event={event} />}>
                 {({ setIsOpened }) => (
                   <EventCard
