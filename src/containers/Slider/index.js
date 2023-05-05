@@ -42,7 +42,6 @@ const Slider = () => {
                   <input
                     key={`${elt.id}`}
                     type="radio"
-                    name="radio-button"
                     checked={idx === radioIdx}
                     readOnly
                   />

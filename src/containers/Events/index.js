@@ -22,7 +22,7 @@ const EventList = () => {
   );
   
   const filteredEvents = 
-    events?.filter((index) => {
+    events?.filter((_, index) => {
     if (
       (currentPage - 1) * PER_PAGE <= index &&
       PER_PAGE * currentPage > index
